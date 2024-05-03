@@ -27,5 +27,9 @@
     "postcss-simple-vars": "^7.0.1",
     "typescript": "5.4.2"
   },
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.1.1",
+  "description": "Get started with the template by clicking `Use this template` button on the top of the page.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
