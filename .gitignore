@@ -41,6 +41,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+.firebase/
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
@@ -130,3 +131,5 @@ dist
 .pnp.*
 
 .DS_Store
+.firebase/hosting.LmZpcmViYXNlXHdhbHJ1cy1mZS1kZXZcaG9zdGluZw.cache
+.firebase/walrus-fe-dev/hosting/_next/static/chunks/986-101f2770ea651449.js
