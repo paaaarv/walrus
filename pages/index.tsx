@@ -1,6 +1,6 @@
 import { Button, Group } from "@mantine/core";
-import Navigation from './components/Navigation';
-import About from './components/About';
+import Navigation from './components/Navigation.js';
+import About from './components/About.js';
 
 export default function IndexPage() {
   return (
