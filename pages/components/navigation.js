@@ -16,7 +16,7 @@ export default function Navigation(){
                    
                     <Grid.Col span={4} style= {{ textAlign: 'right'}}>
 
-                      <Burger  size= "sm" opened = {opened} onClick = {toggle} aria-label="Toggle navigation"/>
+                      <Burger className={classes.burger} size= "sm" opened = {opened} onClick = {toggle} aria-label="Toggle navigation"/>
                     </Grid.Col>
                 </Group>
             </Grid>

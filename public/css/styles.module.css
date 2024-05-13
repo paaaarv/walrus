@@ -2,5 +2,8 @@
 .navigation{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    
+
+}
+.burger{
+    padding-right: 3em;
 }
