@@ -1,22 +1,44 @@
 import { NavLink, Container,Grid, Flex, Text, Group,Burger, Transition , Paper} from '@mantine/core';
 import { useDisclosure, useClickOutside } from '@mantine/hooks';
+import { useState, useEffect } from 'react';
 import classes from '../../public/css/styles.module.css';
 
 
 
 export default function Navigation(){
     const [opened, { toggle } ] = useDisclosure(false);
-    const ref = useClickOutside(() => toggle(false));
+    const ref = useClickOutside(() => toggle());
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth <= 768) { // Adjust the breakpoint as needed
+          setIsMobile(true);
+        } else {
+          setIsMobile(false);
+        }
+      };
+  
+      handleResize(); // Check initial window size
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
     return(
         <Container h={100}>
             <Grid style={{ position: 'fixed', top: 0, left: 0, width: '100%', backgroundColor: 'white', zIndex: 300 }}>
                 <Group style = {{ width: '100%', padding: '25px 20px', flexWrap: 'nowrap' }} >
-                    <Grid.Col span={8}>
+                    <Grid.Col span={2}>
                         <Text className={classes.navigation} size="lg">Walrus</Text>
                     </Grid.Col>
                    
-                    <Grid.Col span={4} style= {{ textAlign: 'right'}}>
-                      <Burger className={classes.burger} size= "sm" opened = {opened} onClick = {toggle} aria-label="Toggle navigation"/>
+                    {isMobile ? 
+                    <Grid.Col span={10} style= {{ textAlign: 'right'}} ref={ref}>
+                      <Burger className={classes.burger} size= "sm" opened = {opened} 
+                      onClick =  {toggle} 
+                       aria-label="Toggle navigation"/>
                        <Transition
                             visible={opened}
                             mounted={opened}
@@ -26,7 +48,6 @@ export default function Navigation(){
                                 {(styles) => (
                             <div className={classes.navContainer} 
                                 style={{ ...styles, zIndex: 500 }}
-                                ref={ref}
                                 
                             >
                             <Paper 
@@ -43,8 +64,20 @@ export default function Navigation(){
                             </Paper>
                             </div>
                                 )}
-                        </Transition>       
-                      </Grid.Col>
+                        </Transition>  
+                    </Grid.Col>
+                        : 
+                    <Grid.Col span = {10}>
+                        <Group direction="row" gap="sm" preventGrowOverflow={true} wrap="nowrap">
+                                <NavLink display="inline-block" label= "Home" href="#"></NavLink>
+                                <NavLink display="inline-block"  label= "About" href="#"></NavLink>
+                                <NavLink display="inline-block"  label= "Features" href="#"></NavLink>
+                                <NavLink display="inline-block"  label= "Pricing"  href="#"></NavLink>
+                                <NavLink display="inline-block"  label="Contact" href="#"></NavLink>
+                        </Group>
+                    </Grid.Col>
+                    }
+                      
                 </Group>
             </Grid>
         </Container>
