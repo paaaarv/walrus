@@ -7,3 +7,12 @@
 .burger{
     padding-right: 3em;
 }
+
+.navContainer{
+    padding: 0;
+    height: '100vh';
+    background-color: var(--mantine-color-dark-0);
+    position: absolute;
+    
+
+}
