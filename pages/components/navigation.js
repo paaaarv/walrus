@@ -28,10 +28,10 @@ export default function Navigation(){
     }, []);
     return(
         <Container h={100}>
-            <Grid style={{ position: 'fixed', top: 0, left: 0, width: '100%', backgroundColor: 'white', zIndex: 300 }}>
+            <Grid className={classes.navigation} style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 300 }}>
                 <Group style = {{ width: '100%', padding: '25px 20px', flexWrap: 'nowrap' }} >
                     <Grid.Col span={2}>
-                        <Text className={classes.navigation} size="lg">Walrus</Text>
+                        <Text size="xl">Walrus</Text>
                     </Grid.Col>
                    
                     {isMobile ? 
@@ -68,7 +68,7 @@ export default function Navigation(){
                     </Grid.Col>
                         : 
                     <Grid.Col span = {10}>
-                        <Group direction="row" gap="sm" preventGrowOverflow={true} wrap="nowrap">
+                        <Group className = {classes.expandedNav} direction="row" gap="sm" preventGrowOverflow={true} wrap="nowrap">
                                 <NavLink display="inline-block" label= "Home" href="#"></NavLink>
                                 <NavLink display="inline-block"  label= "About" href="#"></NavLink>
                                 <NavLink display="inline-block"  label= "Features" href="#"></NavLink>
