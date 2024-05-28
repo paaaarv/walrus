@@ -51,10 +51,10 @@ export default function Navigation(){
                                 
                             >
                             <Paper 
-                                shadow="xs" padding="md" h="75vh"
+                                shadow="xs" padding="md" h="50vh" w="100vw" bg="#B3D5F2" p="0"
                                 
                             >
-                                <Group direction="column" spacing="sm">
+                                <Group direction="column" spacing="md" p="0">
                                 <NavLink label= "Home" href="#"></NavLink>
                                 <NavLink label= "About" href="#"></NavLink>
                                 <NavLink label= "Features" href="#"></NavLink>

@@ -1,14 +1,14 @@
 .body{
-    background-color: #A6C4C5;
+    background-color: #E9F1F2;
     height: 100vh;
 }
 
 .navigation{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    color: #0E0E0E;
+    color: #012611;
     text-transform: uppercase;
-    background-color:#3E7CA8;
+    background-color:#89ABD9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .burger{
@@ -17,12 +17,33 @@
 
 .navContainer{
     padding: 0;
-    height: '100vh';
-    background-color: var(--mantine-color-dark-0);
+    height: 50vh;
+    width: 100vw;
+    background-color: #E9F1F2;
     position: absolute;
-
+    left: 0;
+    margin-top: 1.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
 }
+
+.paper{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navContainer * { 
+    color: #4A6D8C;
+    text-align: center;
+    padding: 5px 0; 
+
+}
+
+.navLink :hover {
+    background-color: #E9F1F2;
+}
+
+
+
 .expandedNav{
     width: 80%;
     margin-left: 20px;
@@ -33,3 +54,4 @@
     font-size: 1rem;
 
 }
+
