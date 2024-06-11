@@ -27,11 +27,11 @@ export default function Navigation(){
       };
     }, []);
     return(
-        <Container h={100}>
+        <Container h='60px'>
             <Grid className={classes.navigation} style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 300 }}>
-                <Group style = {{ width: '100%', padding: '25px 20px', flexWrap: 'nowrap' }} >
+                <Group style = {{ width: '100%', padding: '15px 5px', flexWrap: 'nowrap' }} >
                     <Grid.Col span={2}>
-                        <Text size="xl">Walrus</Text>
+                        <h2 style={{margin: '0', marginLeft: '20px'}} >Walrus</h2>
                     </Grid.Col>
                    
                     {isMobile ? 
