@@ -5,7 +5,7 @@ import classes from '../../public/css/styles.module.css';
 export default function About(){
 
     return(
-        <Container p={0} style={{ marginTop: '1em', width: '100%' }} >
+   
             <Paper className={classes.about} h="80vh">
                 <Stack pt = {100} pl = {10} pr={300} align="flex-start" justify="flex-start" gap="md">
                     <Text c="#012611" tt="uppercase" size="md" fw={400}>What is Walrus?</Text>
@@ -17,7 +17,7 @@ export default function About(){
                     <Image h="100px" src="/images/data.png"></Image>
                 </Group>
             </Paper>
-        </Container>
+
     )
 
 }
